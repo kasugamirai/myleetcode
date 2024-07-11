@@ -7,7 +7,7 @@
 // @lc code=start
 impl Solution {
     pub fn license_key_formatting(s: String, k: i32) -> String {
-        let mut res = String::new();
+        let mut res = String::with_capacity(s.len());
         let mut count = 0;
         for c in s.chars().rev() {
             if c == '-' {
